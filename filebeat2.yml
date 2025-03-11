@@ -1,0 +1,18 @@
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: true
+
+filebeat.inputs:
+  - type: container
+    paths:
+      - "/var/lib/docker/containers/*/*.log"
+    processors:
+      - add_docker_metadata: ~
+    fields:
+      service: wordpress2
+    include_lines:  # 只包含包含特定模式的日志行
+      - "wordpress2.arp.com"  # 只收集包含 "http://wordpress1.arp.com/" 的日志
+
+output.logstash:
+  hosts: ["logstash:5044"]
+  # hosts: ["elasticsearch:9200"]

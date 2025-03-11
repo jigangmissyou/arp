@@ -1,0 +1,6 @@
+# Enable Apache module
+- module: apache
+  access:
+    var.paths: ["/var/lib/docker/containers/*/*.log"]
+  error:
+    var.paths: ["/var/lib/docker/containers/*/*.log"]

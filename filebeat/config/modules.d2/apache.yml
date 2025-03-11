@@ -1,0 +1,10 @@
+- module: apache
+  access:
+    var.paths: ["/var/lib/docker/containers/*/*.log"]
+    input:
+      include_lines: ['wordpress2.arp.com']  # 只包含请求该网址的日志
+  error:
+    var.paths: ["/var/lib/docker/containers/*/*.log"]
+    input:
+      include_lines: ['wordpress2.arp.com']  # 只包含请求该网址的日志
+    
