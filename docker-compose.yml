@@ -82,6 +82,9 @@ services:
       - ./filebeat1.yml:/usr/share/filebeat/filebeat.yml
     depends_on:
       - wordpress1
+      - elasticsearch
+      - logstash  # 添加 logstash 和 elasticsearch 作为依赖
+    restart: always
     command: ["--strict.perms=false"]
     networks:
       - wp_network
@@ -96,6 +99,9 @@ services:
       - ./filebeat2.yml:/usr/share/filebeat/filebeat.yml
     depends_on:
       - wordpress2
+      - elasticsearch
+      - logstash  # 添加 logstash 和 elasticsearch 作为依赖
+    restart: always
     command: ["--strict.perms=false"]
     networks:
       - wp_network
