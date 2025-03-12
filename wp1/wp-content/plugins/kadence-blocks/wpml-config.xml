@@ -1,0 +1,330 @@
+<wpml-config>
+	<gutenberg-blocks>
+		<gutenberg-block type="kadence/advancedbtn" translate="0"/>
+		<gutenberg-block type="kadence/singlebtn" translate="1">
+			<key name="link" type="link" />
+			<key name="text" />
+			<xpath type="link">//a/@href</xpath>
+		</gutenberg-block>
+		<gutenberg-block type="kadence/icon" translate="0"/>
+		<gutenberg-block type="kadence/single-icon" translate="1">
+			<xpath>//div/a/@href</xpath>
+			<xpath>//div/a/@aria-label</xpath>
+			<xpath>//div/a/span/@data-title</xpath>
+		</gutenberg-block>
+		<gutenberg-block type="kadence/progress-bar" translate="1">
+			<key name="label" />
+			<key name="numberPrefix" />
+			<key name="numberSuffix" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/countdown" translate="1">
+			<key name="preLabel" />
+			<key name="postLabel" />
+			<key name="daysLabel" />
+			<key name="hoursLabel" />
+			<key name="minutesLabel" />
+			<key name="secondsLabel" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/countup" translate="1">
+			<key name="title" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advancedheading" translate="1">
+			<xpath>//*[self::h1 or self::h2 or self::h3 or self::h4 or self::h5 or self::h6 or self::p or self::span.wp-block-kadence-advancedheading]</xpath>
+			<xpath type="link">//a/@href</xpath>
+		</gutenberg-block>
+		<gutenberg-block type="kadence/tabs" translate="1">
+			<xpath>//span[@class="kt-title-text"]</xpath>
+			<xpath>//span[@class="kt-title-sub-text"]</xpath>
+		</gutenberg-block>
+		<gutenberg-block type="kadence/infobox" translate="1">
+			<xpath>//div/a/@href</xpath>
+			<xpath>//*[@class="kt-blocks-info-box-title"]</xpath>
+			<xpath>//*[@class="kt-blocks-info-box-text"]</xpath>
+			<xpath>//span[@class="kt-blocks-info-box-learnmore"]</xpath>
+		</gutenberg-block>
+		<gutenberg-block type="kadence/pane" translate="1">
+			<xpath>//span[@class="kt-blocks-accordion-title"]</xpath>
+		</gutenberg-block>
+		<gutenberg-block type="kadence/iconlist" translate="1">
+			<xpath>//li[contains(@class, "kt-svg-icon-list-item-wrap")]//span</xpath>
+			<xpath>//li[contains(@class, "kt-svg-icon-list-item-wrap")]//a/@href</xpath>
+		</gutenberg-block>
+		<gutenberg-block type="kadence/testimonials" translate="1">
+			<xpath>//div[@class="kt-testimonial-title-wrap"]//*[self::h1 or self::h2 or self::h3 or self::h4 or self::h5 or self::h6 or self::p]</xpath>
+			<xpath>//div[@class="kt-testimonial-content"]</xpath>
+			<xpath>//div[@class="kt-testimonial-name"]</xpath>
+			<xpath>//div[@class="kt-testimonial-occupation"]</xpath>
+		</gutenberg-block>
+		<gutenberg-block type="kadence/testimonial" translate="1">
+			<key name="url"/>
+			<key name="title"/>
+			<key name="content"/>
+			<key name="name"/>
+			<key name="occupation"/>
+		</gutenberg-block>
+		<gutenberg-block type="kadence/posts" translate="1">
+			<key name="readmoreLabel" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/image" translate="1">
+			<key name="id" type="post-ids" sub-type="attachment" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/form" translate="1">
+			<xpath>//form[contains(@class, "kb-form")]/@*[name()='data-error-message']</xpath>
+			<xpath>//div[contains(@class, "kadence-blocks-form-field")]/label/text()</xpath>
+			<xpath>//div[contains(@class, "kadence-blocks-form-field")]/a[contains(@class, "kb-accept-link")]/text()</xpath>
+			<xpath>//div[contains(@class, "kadence-blocks-form-field")]/a[contains(@class, "kb-accept-link")]/@href</xpath>
+			<xpath>//div[contains(@class, "kadence-blocks-form-field")]/input/@*[name()='data-label' or name()='placeholder' or name()='value']</xpath>
+			<xpath>//div[contains(@class, "kadence-blocks-form-field")]/textarea/@*[name()='data-label' or name()='placeholder']</xpath>
+			<xpath>//div[contains(@class, "kadence-blocks-form-field")]/input/@*[name()='data-required-message']</xpath>
+			<xpath>//div[contains(@class, "kadence-blocks-form-field")]/textarea/@*[name()='data-required-message']</xpath>
+			<xpath>//div[contains(@class, "kadence-blocks-form-field")]/input/@*[name()='data-validation-message']</xpath>
+			<xpath>//div[contains(@class, "kadence-blocks-form-field")]/textarea/@*[name()='data-validation-message']</xpath>
+			<xpath>//div[contains(@class, "kadence-blocks-form-field")]/textarea</xpath>
+			<xpath>//div[contains(@class, "kadence-blocks-form-field")]/span</xpath>
+			<xpath>//div[contains(@class, "kadence-blocks-form-field")]/button</xpath>
+			<key name="messages">
+				<key name="*">
+					<key name="success"/>
+					<key name="error"/>
+					<key name="required"/>
+					<key name="invalid"/>
+					<key name="recaptchaerror"/>
+				</key>
+			</key>
+			<key name="redirect"/>
+			<key name="email">
+				<key name="*">
+					<key name="subject"/>
+					<key name="fromName"/>
+				</key>
+			</key>
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form" translate="1">
+			<key name="id" type="post-ids" sub-type="kadence_form" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-accept" translate="1">
+			<key name="label" />
+			<key name="description" />
+			<key name="ariaDescription" />
+			<key name="defaultValue" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-captcha" translate="1">
+			<key name="label" />
+			<key name="recaptchaNotice" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-checkbox" translate="1">
+			<key name="label" />
+			<key name="helpText" />
+			<key name="ariaDescription" />
+			<key name="errorMessage" />
+			<key name="requiredMessage" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-date" translate="1">
+			<key name="label" />
+			<key name="helpText" />
+			<key name="ariaDescription" />
+			<key name="errorMessage" />
+			<key name="requiredMessage" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-email" translate="1">
+			<key name="label" />
+			<key name="placeholder" />
+			<key name="ariaDescription" />
+			<key name="defaultValue" />
+			<key name="errorMessage" />
+			<key name="requiredMessage" />
+			<key name="helpText" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-file" translate="1">
+			<key name="label" />
+			<key name="ariaDescription" />
+			<key name="helpText" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-number" translate="1">
+			<key name="label" />
+			<key name="placeholder" />
+			<key name="ariaDescription" />
+			<key name="defaultValue" />
+			<key name="errorMessage" />
+			<key name="requiredMessage" />
+			<key name="helpText" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-radio" translate="1">
+			<key name="label" />
+			<key name="placeholder" />
+			<key name="ariaDescription" />
+			<key name="defaultValue" />
+			<key name="errorMessage" />
+			<key name="requiredMessage" />
+			<key name="helpText" />
+			<key name="options">
+				<key name="*">
+					<key name="label" />
+				</key>
+			</key>
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-select" translate="1">
+			<key name="label" />
+			<key name="placeholder" />
+			<key name="ariaDescription" />
+			<key name="defaultValue" />
+			<key name="errorMessage" />
+			<key name="requiredMessage" />
+			<key name="helpText" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-submit" translate="1">
+			<key name="label" />
+			<key name="text" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-telephone" translate="1">
+			<key name="label" />
+			<key name="placeholder" />
+			<key name="ariaDescription" />
+			<key name="defaultValue" />
+			<key name="errorMessage" />
+			<key name="requiredMessage" />
+			<key name="helpText" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-text" translate="1">
+			<key name="label" />
+			<key name="placeholder" />
+			<key name="ariaDescription" />
+			<key name="defaultValue" />
+			<key name="errorMessage" />
+			<key name="requiredMessage" />
+			<key name="helpText" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-textarea" translate="1">
+			<key name="label" />
+			<key name="placeholder" />
+			<key name="ariaDescription" />
+			<key name="defaultValue" />
+			<key name="errorMessage" />
+			<key name="requiredMessage" />
+			<key name="helpText" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/advanced-form-time" translate="1">
+			<key name="label" />
+			<key name="placeholder" />
+			<key name="ariaDescription" />
+			<key name="defaultValue" />
+			<key name="errorMessage" />
+			<key name="requiredMessage" />
+			<key name="helpText" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/spacer" translate="0"/>
+		<gutenberg-block type="kadence/rowlayout" translate="0"/>
+		<gutenberg-block type="kadence/column" translate="0"/>
+		<gutenberg-block type="kadence/tab" translate="0"/>
+		<gutenberg-block type="kadence/accordion" translate="0"/>
+		<gutenberg-block type="kadence/advancedgallery" translate="1">
+			<key name="imagesDynamic">
+				<key name="*">
+					<key name="alt" />
+					<key name="caption" />
+					<key name="customLink" />
+				</key>
+			</key>
+		</gutenberg-block>
+		<gutenberg-block type="kadence/navigation" translate="1">
+			<key name="id" type="post-ids" sub-type="kadence_navigation" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/navigation-link" translate="1">
+			<key name="label" />
+			<key name="description" />
+			<key name="title" />
+		</gutenberg-block>
+		<gutenberg-block type="kadence/header" translate="1">
+			<key name="id" type="post-ids" sub-type="kadence_header" />
+		</gutenberg-block>
+	</gutenberg-blocks>
+	<custom-types>
+		<custom-type translate="1">kadence_form</custom-type>
+		<custom-type translate="1">kadence_navigation</custom-type>
+		<custom-type translate="1">kadence_header</custom-type>
+	</custom-types>
+	<custom-fields>
+		<custom-field action="translate">_kad_form_fields</custom-field>
+		<custom-field action="translate">_kad_form_email</custom-field>
+		<custom-field action="translate">_kad_form_mailerlite</custom-field>
+		<custom-field action="translate">_kad_form_fluentcrm</custom-field>
+		<custom-field action="translate">_kad_form_sendinblue</custom-field>
+		<custom-field action="translate">_kad_form_mailchimp</custom-field>
+		<custom-field action="translate">_kad_form_getresponse</custom-field>
+		<custom-field action="translate">_kad_form_convertkit</custom-field>
+		<custom-field action="translate">_kad_form_activecampaign</custom-field>
+		<custom-field action="translate">_kad_form_browservalidation</custom-field>
+		<custom-field action="translate">_kad_form_enableanalytics</custom-field>
+		<custom-field action="translate">_kad_form_redirect</custom-field>
+		<custom-field action="translate">_kad_form_submithide</custom-field>
+		<custom-field action="translate">_kad_form_recaptcha</custom-field>
+		<custom-field action="translate">_kad_form_recaptchaversion</custom-field>
+		<custom-field action="translate">_kad_form_webhook</custom-field>
+		<custom-field action="translate">_kad_form_autoemail</custom-field>
+		<custom-field action="translate">_kad_form_entry</custom-field>
+		<custom-field action="translate">_kad_form_fieldborderradius</custom-field>
+		<custom-field action="translate">_kad_form_tabletfieldborderradius</custom-field>
+		<custom-field action="translate">_kad_form_mobilefieldborderradius</custom-field>
+		<custom-field action="translate">_kad_form_fieldborderradiusunit</custom-field>
+		<custom-field action="translate">_kad_form_description</custom-field>
+		<custom-field action="translate">_kad_form_fieldborderstyle</custom-field>
+		<custom-field action="translate">_kad_form_tabletfieldborderstyle</custom-field>
+		<custom-field action="translate">_kad_form_mobilefieldborderstyle</custom-field>
+		<custom-field action="translate">_kad_form_messages</custom-field>
+		<custom-field action="translate">_kad_form_inputfont</custom-field>
+		<custom-field action="translate">_kad_form_style</custom-field>
+		<custom-field action="translate">_kad_form_background</custom-field>
+		<custom-field action="translate">_kad_form_labelfont</custom-field>
+		<custom-field action="translate">_kad_form_radiolabelfont</custom-field>
+		<custom-field action="translate">_kad_form_helpfont</custom-field>
+		<custom-field action="translate">_kad_form_messagebordersuccess</custom-field>
+		<custom-field action="translate">_kad_form_tabletmessagebordersuccess</custom-field>
+		<custom-field action="translate">_kad_form_mobilemessagebordersuccess</custom-field>
+		<custom-field action="translate">_kad_form_messagebordererror</custom-field>
+		<custom-field action="translate">_kad_form_tabletmessagebordererror</custom-field>
+		<custom-field action="translate">_kad_form_mobilemessagebordererror</custom-field>
+		<custom-field action="translate">_kad_form_anchor</custom-field>
+		<custom-field action="translate">_kad_form_classname</custom-field>
+		<custom-field action="translate">_kad_form_actions</custom-field>
+		<custom-field action="translate">_kad_form_padding</custom-field>
+		<custom-field action="translate">_kad_form_tabletpadding</custom-field>
+		<custom-field action="translate">_kad_form_mobilepadding</custom-field>
+		<custom-field action="translate">_kad_form_paddingunit</custom-field>
+		<custom-field action="translate">_kad_form_margin</custom-field>
+		<custom-field action="translate">_kad_form_tabletmargin</custom-field>
+		<custom-field action="translate">_kad_form_mobilemargin</custom-field>
+		<custom-field action="translate">_kad_form_marginunit</custom-field>
+		<custom-field action="translate">_kad_form_messageborderradius</custom-field>
+		<custom-field action="translate">_kad_form_tabletmessageborderradius</custom-field>
+		<custom-field action="translate">_kad_form_mobilemessageborderradius</custom-field>
+		<custom-field action="translate">_kad_form_messageborderradiusunit</custom-field>
+		<custom-field action="translate">_kad_form_messagepadding</custom-field>
+		<custom-field action="translate">_kad_form_tablemessagepadding</custom-field>
+		<custom-field action="translate">_kad_form_mobilemessagepadding</custom-field>
+		<custom-field action="translate">_kad_form_messagepaddingunit</custom-field>
+		<custom-field action="translate">_kad_form_messagemargin</custom-field>
+		<custom-field action="translate">_kad_form_tabletmessagemargin</custom-field>
+		<custom-field action="translate">_kad_form_mobilemessagemargin</custom-field>
+		<custom-field action="translate">_kad_form_messagemarginunit</custom-field>
+		<custom-field action="translate">_kad_form_messagecolor</custom-field>
+		<custom-field action="translate">_kad_form_messagebackground</custom-field>
+		<custom-field action="translate">_kad_form_messagecolorerror</custom-field>
+		<custom-field action="translate">_kad_form_messagebackgrounderror</custom-field>
+		<custom-field action="translate">_kad_form_messagefont</custom-field>
+		<custom-field action="translate">_kad_form_maxwidthunit</custom-field>
+		<custom-field action="translate">_kad_form_maxwidth</custom-field>
+		<custom-field action="translate">_kad_form_importid</custom-field>
+		<custom-field action="copy">_kad_form_tabletFieldBorderStyle</custom-field>
+		<custom-field action="copy">_kad_form_mobileFieldBorderStyle</custom-field>
+		<custom-field action="copy">_kad_form_inputFont</custom-field>
+		<custom-field action="copy">_kad_form_style</custom-field>
+		<custom-field action="copy">_kad_form_fieldBorderRadius</custom-field>
+		<custom-field action="copy">_kad_form_tabletFieldBorderRadius</custom-field>
+		<custom-field action="copy">_kad_form_mobileFieldBorderRadius</custom-field>
+		<custom-field action="copy">_kad_form_fieldBorderRadiusUnit</custom-field>	
+		<custom-field action="copy">_kad_form_labelFont</custom-field>	
+		<custom-field action="copy">_kad_form_radioLabelFont</custom-field>			
+		<custom-field action="translate">_kad_navigation_description</custom-field>
+		<custom-field action="translate">_kad_header_description</custom-field>
+	</custom-fields>
+</wpml-config>

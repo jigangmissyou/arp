@@ -4,7 +4,7 @@
     input:
       include_lines: ['wordpress1.arp.com']  # 只包含请求该网址的日志
   error:
-    var.paths: ["D:/Weltec/arp/wordpress1/error.log"]
+    var.paths: ["/var/lib/docker/containers/*/*.log"]
     input:
       include_lines: ['wordpress1.arp.com']  # 只包含请求该网址的日志
     

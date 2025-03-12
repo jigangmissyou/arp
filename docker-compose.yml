@@ -13,7 +13,7 @@ services:
       WORDPRESS_DB_PASSWORD: root
       WORDPRESS_DB_NAME: wordpress1
     volumes:
-      - wp1_data:/var/www/html  # 只挂载 WordPress 数据
+      - ./wp1/wp-content:/var/www/html/wp-content
     networks:
       - wp_network
 
@@ -89,7 +89,7 @@ services:
     image: elastic/filebeat:7.17.0
     user: root
     volumes:
-      - ./filebeat/config/modules.d:/usr/share/filebeat/modules.d2
+      - ./filebeat/config/modules.d2:/usr/share/filebeat/modules.d
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - /var/log:/var/log:ro
       - ./filebeat2.yml:/usr/share/filebeat/filebeat.yml

@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=window.kadence.icons;wp&&wp.blocks&&wp.blocks.updateCategory("kadence-blocks",{icon:e.kadenceCatNewIcon}),(this.kadence=this.kadence||{})["extension-kadence-base"]={}})();
