@@ -1,20 +1,12 @@
-filebeat.inputs:
-  - type: container
-    paths:
-      - "/var/lib/docker/containers/*/*.log"
-    processors:
-      - add_docker_metadata: ~
-    fields:
-      service: wordpress1-apache
-    include_lines: 
-      - "wordpress1.arp.com"
+filebeat.config.modules:
+  path: ${path.config}/modules.d/*.yml
+  reload.enabled: true  # 允许动态加载模块
 
-  - type: log
-    paths:
-      - "./wp-debug.log"  # WordPress 业务日志
-    fields:
-      service: wordpress1-business
+output.elasticsearch:
+  hosts: ["http://elasticsearch:9200"]
+  indices:
+    - index: "wordpress1-%{+yyyy.MM.dd}"
 
-output.logstash:
-  hosts: ["logstash:5044"]
-  # hosts: ["elasticsearch:9200"]
+setup.kibana:
+  host: "http://kibana:5601"
+setup.dashboards.enabled: true

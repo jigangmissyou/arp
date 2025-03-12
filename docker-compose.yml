@@ -14,6 +14,8 @@ services:
       WORDPRESS_DB_NAME: wordpress1
     volumes:
       - ./wp1/wp-content:/var/www/html/wp-content
+      # - ./wp1/apache2.conf:/etc/apache2/apache2.conf
+      - ./wp1/apache-logs:/var/log/apache2
     networks:
       - wp_network
 
@@ -41,7 +43,8 @@ services:
       WORDPRESS_DB_PASSWORD: root
       WORDPRESS_DB_NAME: wordpress2
     volumes:
-      - wp2_data:/var/www/html  # 只挂载 WordPress 数据
+      - ./wp2/wp-content:/var/www/html/wp-content
+      - ./wp2/apache-logs:/var/log/apache2
     networks:
       - wp_network
 
@@ -75,8 +78,7 @@ services:
     user: root
     volumes:
       - ./filebeat/config/modules.d:/usr/share/filebeat/modules.d
-      - /var/lib/docker/containers:/var/lib/docker/containers:ro
-      - /var/log:/var/log:ro
+      - ./wp1/apache-logs:/var/log/apache2
       - ./filebeat1.yml:/usr/share/filebeat/filebeat.yml
     depends_on:
       - wordpress1
@@ -90,8 +92,7 @@ services:
     user: root
     volumes:
       - ./filebeat/config/modules.d2:/usr/share/filebeat/modules.d
-      - /var/lib/docker/containers:/var/lib/docker/containers:ro
-      - /var/log:/var/log:ro
+      - ./wp2/apache-logs:/var/log/apache2
       - ./filebeat2.yml:/usr/share/filebeat/filebeat.yml
     depends_on:
       - wordpress2
@@ -148,7 +149,6 @@ services:
     image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
     environment:
       - discovery.type=single-node
-      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
     volumes:
       - esdata:/usr/share/elasticsearch/data
     ports:
