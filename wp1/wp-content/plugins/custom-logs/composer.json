@@ -1,0 +1,17 @@
+{
+    "name": "jigang/wp-page-logging",
+    "description": "To record page log",
+    "autoload": {
+        "psr-4": {
+            "Jigang\\WpPageLogging\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jigang"
+        }
+    ],
+    "require": {
+        "monolog/monolog": "^2.10"
+    }
+}
