@@ -1,5 +1,7 @@
 - module: apache
   access:
     var.paths: ["/var/log/apache2/access.log"]
+    index: "wordpress1-%{+yyyy.MM.dd}"
   error:
     var.paths: ["/var/log/apache2/error.log"]
+    index: "wordpress1-apache-error-%{+yyyy.MM.dd}"

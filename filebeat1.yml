@@ -1,12 +1,25 @@
-filebeat.config.modules:
-  path: ${path.config}/modules.d/*.yml
-  reload.enabled: true  # 允许动态加载模块
+# # Filebeat 配置模块
+# filebeat.config.modules:
+#   path: ${path.config}/modules.d/*.yml  # 确保启用所有模块配置
 
-output.elasticsearch:
-  hosts: ["http://elasticsearch:9200"]
-  indices:
-    - index: "wordpress1-%{+yyyy.MM.dd}"
+filebeat.inputs:
+  - type: container
+    paths:
+      - "/var/lib/docker/containers/*/*.log"  # 这样能捕获所有容器的日志
+    fields:
+      log_source: apache1  # 为 Apache 日志添加 log_type 字段
+    include_lines: ['wordpress1.arp.com']  # 只采集包含该域名的日志
 
-setup.kibana:
-  host: "http://kibana:5601"
-setup.dashboards.enabled: true
+  # 配置自定义 user-activity 日志的输入
+  # - type: log
+  #   enabled: true
+  #   paths:
+  #     - /var/log/user-activity.log  # 自定义 user-activity 日志路径
+  #   fields:
+  #     log_type: user-activity  # 为 user-activity 日志添加 log_type 字段
+
+output.logstash:
+  hosts: ["logstash:5044"]  # Logstash 服务器地址和端口
+# setup.kibana:
+#   host: "http://kibana:5601"  # Kibana 服务器地址
+# setup.dashboards.enabled: true  # 启用仪表板配置

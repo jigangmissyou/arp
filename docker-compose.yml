@@ -14,8 +14,7 @@ services:
       WORDPRESS_DB_NAME: wordpress1
     volumes:
       - ./wp1/wp-content:/var/www/html/wp-content
-      # - ./wp1/apache2.conf:/etc/apache2/apache2.conf
-      - ./wp1/apache-logs:/var/log/apache2
+      - ./wp1/user-activity.log:/var/www/html/wp-content/plugins/custom-logs/user-activity.log 
     networks:
       - wp_network
 
@@ -44,7 +43,6 @@ services:
       WORDPRESS_DB_NAME: wordpress2
     volumes:
       - ./wp2/wp-content:/var/www/html/wp-content
-      - ./wp2/apache-logs:/var/log/apache2
     networks:
       - wp_network
 
@@ -77,8 +75,8 @@ services:
     image: elastic/filebeat:7.17.0
     user: root
     volumes:
-      - ./filebeat/config/modules.d:/usr/share/filebeat/modules.d
-      - ./wp1/apache-logs:/var/log/apache2
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      # - ./wp1/user-activity.log:/var/log/user-activity.log
       - ./filebeat1.yml:/usr/share/filebeat/filebeat.yml
     depends_on:
       - wordpress1
@@ -94,8 +92,7 @@ services:
     image: elastic/filebeat:7.17.0
     user: root
     volumes:
-      - ./filebeat/config/modules.d2:/usr/share/filebeat/modules.d
-      - ./wp2/apache-logs:/var/log/apache2
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
       - ./filebeat2.yml:/usr/share/filebeat/filebeat.yml
     depends_on:
       - wordpress2
@@ -122,32 +119,32 @@ services:
   #     - wp_network
 
   # Metricbeat for WordPress 1
-  metricbeat1:
-    image: docker.elastic.co/beats/metricbeat:7.17.0
-    user: root
-    volumes:
-      - ./metricbeat/metricbeat1.yml:/usr/share/metricbeat/metricbeat.yml
-      - /var/lib/docker/containers:/var/lib/docker/containers:ro
-      - /var/log:/var/log:ro
-    depends_on:
-      - wordpress1
-    command: ["--strict.perms=false"]
-    networks:
-      - wp_network
+  # metricbeat1:
+  #   image: docker.elastic.co/beats/metricbeat:7.17.0
+  #   user: root
+  #   volumes:
+  #     - ./metricbeat/metricbeat1.yml:/usr/share/metricbeat/metricbeat.yml
+  #     - /var/lib/docker/containers:/var/lib/docker/containers:ro
+  #     - /var/log:/var/log:ro
+  #   depends_on:
+  #     - wordpress1
+  #   command: ["--strict.perms=false"]
+  #   networks:
+  #     - wp_network
 
-  # Metricbeat for WordPress 2
-  metricbeat2:
-    image: docker.elastic.co/beats/metricbeat:7.17.0
-    user: root
-    volumes:
-      - ./metricbeat/metricbeat2.yml:/usr/share/metricbeat/metricbeat.yml
-      - /var/lib/docker/containers:/var/lib/docker/containers:ro
-      - /var/log:/var/log:ro
-    depends_on:
-      - wordpress2
-    command: ["--strict.perms=false"]
-    networks:
-      - wp_network
+  # # Metricbeat for WordPress 2
+  # metricbeat2:
+  #   image: docker.elastic.co/beats/metricbeat:7.17.0
+  #   user: root
+  #   volumes:
+  #     - ./metricbeat/metricbeat2.yml:/usr/share/metricbeat/metricbeat.yml
+  #     - /var/lib/docker/containers:/var/lib/docker/containers:ro
+  #     - /var/log:/var/log:ro
+  #   depends_on:
+  #     - wordpress2
+  #   command: ["--strict.perms=false"]
+  #   networks:
+  #     - wp_network
 
 
   # ELK Stack
