@@ -1,0 +1,29 @@
+mysqld, Version: 5.7.44-log (MySQL Community Server (GPL)). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2025-03-18T21:06:16.047924Z
+# User@Host: root[root] @  [172.23.0.9]  Id:    38
+# Query_time: 5.000464  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+use wordpress1;
+SET timestamp=1742331976;
+SELECT SLEEP(5);
+# Time: 2025-03-18T21:10:25.683025Z
+# User@Host: root[root] @  [172.23.0.9]  Id:    45
+# Query_time: 5.000429  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+SET timestamp=1742332225;
+SELECT SLEEP(5);
+mysqld, Version: 5.7.44-log (MySQL Community Server (GPL)). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+# Time: 2025-03-18T21:20:02.419234Z
+# User@Host: root[root] @  [172.23.0.8]  Id:     6
+# Query_time: 5.011453  Lock_time: 0.000000 Rows_sent: 1  Rows_examined: 0
+use wordpress1;
+SET timestamp=1742332802;
+SELECT SLEEP(5);
+mysqld, Version: 5.7.44-log (MySQL Community Server (GPL)). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+mysqld, Version: 5.7.44-log (MySQL Community Server (GPL)). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument

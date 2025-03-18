@@ -26,7 +26,8 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: wordpress1
     volumes:
-      - mysql1_data:/var/lib/mysql  # 只挂载 MySQL 数据
+      - ./mysql1_logs:/var/log/mysql   # 新增：挂载日志文件到宿主机
+    command: --slow-query-log=1 --slow-query-log-file=/var/log/mysql/slow.log --long-query-time=1
     networks:
       - wp_network
 
@@ -76,7 +77,8 @@ services:
     user: root
     volumes:
       - /var/lib/docker/containers:/var/lib/docker/containers:ro
-      # - ./wp1/user-activity.log:/var/log/user-activity.log
+      - ./wp1/user-activity.log:/var/log/user-activity.log
+      - ./mysql1_logs:/var/log/mysql 
       - ./filebeat1.yml:/usr/share/filebeat/filebeat.yml
     depends_on:
       - wordpress1

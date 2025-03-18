@@ -11,15 +11,22 @@ filebeat.inputs:
     include_lines: ['wordpress1.arp.com']  # 只采集包含该域名的日志
 
   # 配置自定义 user-activity 日志的输入
-  # - type: log
-  #   enabled: true
-  #   paths:
-  #     - /var/log/user-activity.log  # 自定义 user-activity 日志路径
-  #   fields:
-  #     log_type: user-activity  # 为 user-activity 日志添加 log_type 字段
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/user-activity.log  # 自定义 user-activity 日志路径
+    fields:
+      log_source: user-activity  # 为 user-activity 日志添加 log_type 字段
+  # 新增采集 MySQL 慢查询日志
+  - type: log
+    enabled: true
+    paths:
+      - /var/log/mysql/slow.log  # 改为你的实际路径
+    fields:
+      log_source: mysql1-slow-query
+    multiline.pattern: '^\d{6}'   # MySQL 慢查询日志以日期数字开头
+    multiline.negate: true
+    multiline.match: after
 
 output.logstash:
   hosts: ["logstash:5044"]  # Logstash 服务器地址和端口
-# setup.kibana:
-#   host: "http://kibana:5601"  # Kibana 服务器地址
-# setup.dashboards.enabled: true  # 启用仪表板配置
