@@ -4,3 +4,4 @@ wp1/apache-logs/other_vhosts_access.log
 wp2/apache-logs/access.log
 wp2/apache-logs/error.log
 wp2/apache-logs/other_vhosts_access.log
+docker-compose.yml
