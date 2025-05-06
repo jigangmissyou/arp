@@ -20,7 +20,6 @@ This project runs two WordPress sites with their respective MySQL databases and 
 
 ### 1. Clone the Repository
 
-```bash
 git clone https://github.com/jigangmissyou/arp.git
 cd arp
 
