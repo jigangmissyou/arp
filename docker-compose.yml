@@ -1,0 +1,197 @@
+version: '3.7'
+
+services:
+  # WordPress 1
+  wordpress1:
+    image: wordpress:latest
+    restart: always
+    depends_on:
+      - mysql1
+    environment:
+      WORDPRESS_DB_HOST: mysql1:3306
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: root
+      WORDPRESS_DB_NAME: wordpress1
+    volumes:
+      - ./wp1/wp-content:/var/www/html/wp-content
+      - ./wp1/user-activity.log:/var/www/html/wp-content/plugins/custom-logs/user-activity.log 
+    networks:
+      - wp_network
+
+  # MySQL 1
+  mysql1:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wordpress1
+    volumes:
+      - ./mysql1_logs:/var/log/mysql  
+    command: --slow-query-log=1 --slow-query-log-file=/var/log/mysql/slow.log --long-query-time=1
+    networks:
+      - wp_network
+
+  # WordPress 2
+  wordpress2:
+    image: wordpress:latest
+    restart: always
+    depends_on:
+      - mysql2
+    environment:
+      WORDPRESS_DB_HOST: mysql2:3306
+      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_PASSWORD: root
+      WORDPRESS_DB_NAME: wordpress2
+    volumes:
+      - ./wp2/wp-content:/var/www/html/wp-content
+    networks:
+      - wp_network
+
+  # MySQL 2
+  mysql2:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: wordpress2
+    volumes:
+      - mysql2_data:/var/lib/mysql  
+    networks:
+      - wp_network
+
+  nginx:
+    image: nginx:latest
+    container_name: nginx_proxy
+    restart: always
+    ports:
+      - "80:80"  
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    networks:
+      - wp_network
+
+  # Filebeat for WordPress 1
+  filebeat1:
+    image: elastic/filebeat:7.17.0
+    user: root
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - ./wp1/user-activity.log:/var/log/user-activity.log
+      - ./mysql1_logs:/var/log/mysql 
+      - ./filebeat1.yml:/usr/share/filebeat/filebeat.yml
+    depends_on:
+      - wordpress1
+      - elasticsearch
+      - logstash  
+    restart: always
+    command: ["--strict.perms=false"]
+    networks:
+      - wp_network
+
+  # Filebeat for WordPress 2
+  filebeat2:
+    image: elastic/filebeat:7.17.0
+    user: root
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - ./filebeat2.yml:/usr/share/filebeat/filebeat.yml
+    depends_on:
+      - wordpress2
+      - elasticsearch
+      - logstash  #
+    restart: always
+    command: ["--strict.perms=false"]
+    networks:
+      - wp_network
+
+    # Filebeat for Kibana
+  filebeat-kibana:
+    image: elastic/filebeat:7.17.0
+    user: root
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./filebeat-kibana.yml:/usr/share/filebeat/filebeat.yml
+    depends_on:
+      - kibana
+      - logstash
+    command: ["--strict.perms=false"]
+    networks:
+      - wp_network
+
+  # Metricbeat for WordPress 1
+  # metricbeat1:
+  #   image: docker.elastic.co/beats/metricbeat:7.17.0
+  #   user: root
+  #   volumes:
+  #     - ./metricbeat/metricbeat1.yml:/usr/share/metricbeat/metricbeat.yml
+  #     - /var/lib/docker/containers:/var/lib/docker/containers:ro
+  #     - /var/log:/var/log:ro
+  #   depends_on:
+  #     - wordpress1
+  #   command: ["--strict.perms=false"]
+  #   networks:
+  #     - wp_network
+
+  # # Metricbeat for WordPress 2
+  # metricbeat2:
+  #   image: docker.elastic.co/beats/metricbeat:7.17.0
+  #   user: root
+  #   volumes:
+  #     - ./metricbeat/metricbeat2.yml:/usr/share/metricbeat/metricbeat.yml
+  #     - /var/lib/docker/containers:/var/lib/docker/containers:ro
+  #     - /var/log:/var/log:ro
+  #   depends_on:
+  #     - wordpress2
+  #   command: ["--strict.perms=false"]
+  #   networks:
+  #     - wp_network
+
+
+  # ELK Stack
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - esdata:/usr/share/elasticsearch/data
+    ports:
+      - "9200:9200"
+    networks:
+      - wp_network
+
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.17.0
+    depends_on:
+      - elasticsearch
+    volumes:
+      - ./logstash.conf:/usr/share/logstash/pipeline/logstash.conf
+    ports:
+      - "5044:5044"
+    networks:
+      - wp_network
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.17.0
+    depends_on:
+      - elasticsearch
+    ports:
+      - "5601:5601"
+    volumes:
+    - ./kibana-logs:/usr/share/kibana/logs
+    networks:
+      - wp_network
+    environment:
+      XPACK_APM_SERVICEMAPENABLED: "true"
+      XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY: "w8Dq3Pz6Lu7Xv92Bq1ErTxLgMi8NvYcK"
+
+volumes:
+  wp1_data:
+  wp2_data:
+  mysql1_data:
+  mysql2_data:
+  esdata:
+
+networks:
+  wp_network:
+    driver: bridge
