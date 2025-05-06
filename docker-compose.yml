@@ -26,7 +26,7 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: wordpress1
     volumes:
-      - ./mysql1_logs:/var/log/mysql   # 新增：挂载日志文件到宿主机
+      - ./mysql1_logs:/var/log/mysql  
     command: --slow-query-log=1 --slow-query-log-file=/var/log/mysql/slow.log --long-query-time=1
     networks:
       - wp_network
@@ -55,17 +55,16 @@ services:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: wordpress2
     volumes:
-      - mysql2_data:/var/lib/mysql  # 只挂载 MySQL 数据
+      - mysql2_data:/var/lib/mysql  
     networks:
       - wp_network
 
-  # Nginx 反向代理
   nginx:
     image: nginx:latest
     container_name: nginx_proxy
     restart: always
     ports:
-      - "80:80"  # 监听 80 端口
+      - "80:80"  
     volumes:
       - ./nginx.conf:/etc/nginx/nginx.conf:ro
     networks:
@@ -83,7 +82,7 @@ services:
     depends_on:
       - wordpress1
       - elasticsearch
-      - logstash  # 添加 logstash 和 elasticsearch 作为依赖
+      - logstash  
     restart: always
     command: ["--strict.perms=false"]
     networks:
@@ -99,26 +98,26 @@ services:
     depends_on:
       - wordpress2
       - elasticsearch
-      - logstash  # 添加 logstash 和 elasticsearch 作为依赖
+      - logstash  #
     restart: always
     command: ["--strict.perms=false"]
     networks:
       - wp_network
 
-  # Metricbeat
-  # metricbeat:
-  #   image: docker.elastic.co/beats/metricbeat:7.17.0
-  #   user: root
-  #   volumes:
-  #     - ./metricbeat/metricbeat.yml:/usr/share/metricbeat/metricbeat.yml
-  #     - /var/lib/docker/containers:/var/lib/docker/containers:ro
-  #     - /var/log:/var/log:ro
-  #   depends_on:
-  #     - wordpress1
-  #     - wordpress2
-  #   command: ["--strict.perms=false"]
-  #   networks:
-  #     - wp_network
+    # Filebeat for Kibana
+  filebeat-kibana:
+    image: elastic/filebeat:7.17.0
+    user: root
+    volumes:
+      - /var/lib/docker/containers:/var/lib/docker/containers:ro
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./filebeat-kibana.yml:/usr/share/filebeat/filebeat.yml
+    depends_on:
+      - kibana
+      - logstash
+    command: ["--strict.perms=false"]
+    networks:
+      - wp_network
 
   # Metricbeat for WordPress 1
   # metricbeat1:
@@ -178,8 +177,13 @@ services:
       - elasticsearch
     ports:
       - "5601:5601"
+    volumes:
+    - ./kibana-logs:/usr/share/kibana/logs
     networks:
       - wp_network
+    environment:
+      XPACK_APM_SERVICEMAPENABLED: "true"
+      XPACK_ENCRYPTEDSAVEDOBJECTS_ENCRYPTIONKEY: "w8Dq3Pz6Lu7Xv92Bq1ErTxLgMi8NvYcK"
 
 volumes:
   wp1_data:

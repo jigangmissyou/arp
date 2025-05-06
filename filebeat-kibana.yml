@@ -1,0 +1,18 @@
+filebeat.inputs:
+  - type: container
+    paths:
+      - /var/lib/docker/containers/*/*.log
+    processors:
+      - add_docker_metadata: ~
+
+      - drop_event:
+          when:
+            not:
+              contains:
+                container.name: "arp-kibana-1"
+
+output.logstash:
+  hosts: ["logstash:5044"]
+
+fields:
+  log_source: kibana-stdout

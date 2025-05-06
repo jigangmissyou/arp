@@ -3,11 +3,9 @@ metricbeat.config.modules:
   reload.enabled: false
 
 metricbeat.modules:
-  # 监控 WordPress 1（Web 服务器 1）的系统指标
   - module: system
     period: 10s
     metricsets: ["cpu", "memory", "filesystem", "network"]
-    # 添加一个标识符，用于区分来自不同服务器的数据
     index: "metricbeat-wordpress1-%{+yyyy.MM.dd}"
 
 setup.dashboards.enabled: true

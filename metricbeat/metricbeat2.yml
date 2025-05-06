@@ -3,7 +3,6 @@ metricbeat.config.modules:
   reload.enabled: false
 
 metricbeat.modules:
-  # 监控 WordPress 2（Web 服务器 2）的系统指标
   - module: system
     period: 10s
     metricsets: ["cpu", "memory", "filesystem", "network"]
@@ -18,4 +17,3 @@ setup.template.pattern: "metricbeat-*"
 
 output.elasticsearch:
   hosts: ["http://elasticsearch:9200"]
-  # 添加不同的索引名称，用于区分 WordPress 1 和 WordPress 2 的数据

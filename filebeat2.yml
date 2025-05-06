@@ -2,11 +2,9 @@ filebeat.inputs:
   - type: container
     paths:
       - "/var/lib/docker/containers/*/*.log"
-    processors:
-      - add_docker_metadata: ~
     fields:
-      log_source: apache2
-    include_lines: ['wordpress2.arp.com']  # 只采集包含该域名的日志
+      log_source: apache2  
+    include_lines: ['wordpress2.arp.com'] 
 
 output.logstash:
-  hosts: ["logstash:5044"]
+  hosts: ["logstash:5044"] 
