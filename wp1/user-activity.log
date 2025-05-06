@@ -1,51 +1,106 @@
-msg=User stayed on the page,timestamp=2025-03-17T23:27:55.550626+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=88
-msg=User scroll down to the bottom,timestamp=2025-03-17T23:28:03.262908+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User scroll down to the 50% position,timestamp=2025-03-17T23:28:03.264194+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User stayed on the page,timestamp=2025-03-17T23:27:55.550626+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=88
-msg=User stayed on the page,timestamp=2025-03-17T23:27:55.550626+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b639259423,duration=87
-msg=User stayed on the page,timestamp=2025-03-17T23:27:55.550626+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=88
-msg=User stayed on the page,timestamp=2025-03-17T23:27:55.550626+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b639259443,duration=90
-msg=User stayed on the page,timestamp=2025-03-18T00:04:39.858106+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=2198
-msg=User scroll down to the 50% position,timestamp=2025-03-18T00:07:38.364860+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User stayed on the page,timestamp=2025-03-18T00:07:44.459333+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=175
-msg=User stayed on the page,timestamp=2025-03-18T00:07:44.459333+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b639259422,duration=130
-msg=User scroll down to the 50% position,timestamp=2025-03-18T00:09:38.364860+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User scroll down to the 50% position,timestamp=2025-03-18T00:10:38.364860+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User scroll down to the 50% position,timestamp=2025-03-18T00:50:38.364860+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User scroll down to the bottom,timestamp=2025-03-18T02:50:38.364860+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-
-
-msg=User scroll down to the 50% position,timestamp=2025-03-18T03:04:03.530660+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User scroll down to the bottom,timestamp=2025-03-18T03:04:03.551275+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User triggered click event ,timestamp=2025-03-18T03:08:53.285287+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=
-msg=User triggered click event ,timestamp=2025-03-18T03:09:00.960332+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=
-msg=User triggered click event ,timestamp=2025-03-18T03:09:05.370067+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=
-msg=User scroll down to the bottom,timestamp=2025-03-18T03:09:05.371048+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User triggered click event,timestamp=2025-03-18T03:09:13.828783+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=
-msg=User triggered click event,timestamp=2025-03-18T03:09:24.554763+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=
-msg=User triggered click event,timestamp=2025-03-18T03:09:35.479189+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=
-msg=User triggered click event,timestamp=2025-03-18T03:09:44.274582+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=
-msg=User triggered click event,timestamp=2025-03-18T03:09:51.582699+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=
-msg=User triggered click event,timestamp=2025-03-18T03:09:59.757801+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=
-msg=User triggered click event,timestamp=2025-03-18T03:10:06.973539+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=
-msg=User triggered click event,timestamp=2025-03-18T03:10:12.439385+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=
-msg=User triggered click event,timestamp=2025-03-18T03:10:19.870975+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=
-msg=User triggered click event,timestamp=2025-03-18T03:44:49.158709+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User stayed on the page,timestamp=2025-03-18T20:51:01.719138+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=61638
-msg=User stayed on the page,timestamp=2025-03-18T20:51:14.946464+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=61684
-msg=User triggered click event,timestamp=2025-03-18T20:51:28.476746+00:00,level_name=INFO,user_ip=127.0.0.1,request_id=193d42e5c4b8f6830b147f439b884607,duration=0
-msg=User scroll down to the 50% position,timestamp=2025-03-18T20:57:52.320355+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User scroll down to the bottom,timestamp=2025-03-18T20:57:52.334530+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User stayed on the page,timestamp=2025-03-18T20:57:54.195275+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=26
-msg=User scroll down to the 50% position,timestamp=2025-03-18T20:58:01.233924+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User scroll down to the bottom,timestamp=2025-03-18T20:58:01.234875+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User stayed on the page,timestamp=2025-03-18T20:58:08.642262+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=7
-msg=User scroll down to the 50% position,timestamp=2025-03-18T20:58:16.595031+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User scroll down to the bottom,timestamp=2025-03-18T20:58:16.600234+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User scroll down to the bottom,timestamp=2025-03-18T20:58:27.527253+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User stayed on the page,timestamp=2025-03-18T20:58:38.510056+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=24
-msg=User scroll down to the bottom,timestamp=2025-03-18T20:58:42.672504+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User scroll down to the 50% position,timestamp=2025-03-18T20:58:42.673658+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User stayed on the page,timestamp=2025-03-18T21:03:40.864848+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=298
-msg=User triggered click event,timestamp=2025-03-18T21:04:25.585723+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
-msg=User triggered click event,timestamp=2025-03-18T21:05:07.796328+00:00,level_name=INFO,user_ip=172.23.0.1,request_id=83f1057f94baf97b9b3ad5b6392594b3,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T02:02:32.746469+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the bottom,timestamp=2025-05-06T02:02:39.315499+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T02:03:09.331642+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User stayed on the page,timestamp=2025-05-06T02:03:28.749284+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=59
+msg=User triggered click event,timestamp=2025-05-06T02:04:51.229539+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T02:05:34.608195+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the bottom,timestamp=2025-05-06T02:05:42.292775+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User stayed on the page,timestamp=2025-05-06T02:05:47.142838+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=54
+msg=User stayed on the page,timestamp=2025-05-06T02:13:48.001321+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=595
+msg=User scroll down to the 50% position,timestamp=2025-05-06T02:14:03.377875+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the bottom,timestamp=2025-05-06T02:14:09.676252+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T02:14:19.593727+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the bottom,timestamp=2025-05-06T02:14:27.110755+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T02:14:39.977633+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User stayed on the page,timestamp=2025-05-06T02:14:47.094721+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=52
+msg=User triggered click event,timestamp=2025-05-06T02:14:55.602395+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T02:14:59.496732+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the bottom,timestamp=2025-05-06T02:15:03.263220+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User stayed on the page,timestamp=2025-05-06T02:17:30.241108+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=155
+msg=User scroll down to the 50% position,timestamp=2025-05-06T02:59:03.770019+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the bottom,timestamp=2025-05-06T02:59:08.128795+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User stayed on the page,timestamp=2025-05-06T03:02:19.707146+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=195
+msg=User stayed on the page,timestamp=2025-05-06T03:02:59.073998+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=7
+msg=User scroll down to the 50% position,timestamp=2025-05-06T03:03:32.214141+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the bottom,timestamp=2025-05-06T03:03:39.166024+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User stayed on the page,timestamp=2025-05-06T03:03:57.976121+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=56
+msg=User scroll down to the 50% position,timestamp=2025-05-06T03:04:17.757864+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User stayed on the page,timestamp=2025-05-06T03:04:21.618035+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=10
+msg=User scroll down to the 50% position,timestamp=2025-05-06T03:05:02.286980+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the bottom,timestamp=2025-05-06T03:05:08.751182+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T08:57:10.668879+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T08:57:17.764410+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User triggered click event,timestamp=2025-05-06T08:57:21.780721+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T08:57:23.625421+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T08:57:28.530961+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User stayed on the page,timestamp=2025-05-06T08:57:34.048977+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=28
+msg=User stayed on the page,timestamp=2025-05-06T08:57:34.073047+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=93
+msg=User scroll down to the 50% position,timestamp=2025-05-06T09:24:04.340257+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T09:24:14.905462+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T09:24:22.294131+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T09:24:27.998823+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T09:24:38.621168+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T09:24:47.811094+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T09:24:56.739832+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T09:25:03.957055+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T09:25:11.265793+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T09:25:16.295829+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T09:25:16.856287+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T09:25:24.706896+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T09:25:29.285734+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T09:25:35.577912+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T09:25:42.468440+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T09:25:49.251899+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T09:26:03.476455+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T09:26:10.292181+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T09:26:17.038399+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T09:26:21.246167+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T09:26:25.916130+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T09:26:29.655286+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T09:26:33.696641+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T09:26:38.522534+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User stayed on the page,timestamp=2025-05-06T09:30:29.334336+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=23155
+msg=User stayed on the page,timestamp=2025-05-06T21:09:39.815834+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=42338
+msg=User triggered click event,timestamp=2025-05-06T21:10:00.353359+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T21:11:23.069394+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:11:33.504743+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:11:44.349481+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:11:54.613022+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User stayed on the page,timestamp=2025-05-06T21:12:01.676076+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=136
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:12:06.121012+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:12:14.918950+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:12:20.685981+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:12:26.891937+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:12:33.875941+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:12:39.994412+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:12:44.401255+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:12:50.108314+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:12:57.325780+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:04.593071+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:12.851889+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:19.916682+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:28.063158+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:33.571203+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:33.572333+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=8fe13165bf34d3eb6fac13dd40c84201,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:36.879048+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=8fe13165bf34d3eb6fac13dd40c84201,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:37.606559+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:41.384669+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:41.385889+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=8fe13165bf34d3eb6fac13dd40c84201,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:45.572220+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=8fe13165bf34d3eb6fac13dd40c84201,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:45.573417+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:48.702125+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:48.707675+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=8fe13165bf34d3eb6fac13dd40c84201,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:53.047968+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=8fe13165bf34d3eb6fac13dd40c84201,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:53.068360+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg==User stayed on the page,timestamp=2025-05-06T21:13:56.443087+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=8fe13165bf34d3eb6fac13dd40c84201,duration=4
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:13:59.653339+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=0
+msg=User stayed on the page,timestamp=2025-05-06T21:14:08.044929+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=172
+msg=User stayed on the page,timestamp=2025-05-06T21:16:08.082612+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=8
+msg=User stayed on the page,timestamp=2025-05-06T21:16:20.659459+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=ea91ec19465e30fb6829eeead0411224,duration=13
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:19:54.173598+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=485571875c9162de624eb677858853b7,duration=0
+msg=User scroll down to the 50% position,timestamp=2025-05-06T21:20:05.650657+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=485571875c9162de624eb677858853b7,duration=0
+msg=User triggered click event,timestamp=2025-05-06T21:20:11.997314+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=485571875c9162de624eb677858853b7,duration=0
+msg=User stayed on the page,timestamp=2025-05-06T21:20:17.882929+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=485571875c9162de624eb677858853b7,duration=46
+msg=User triggered click event,timestamp=2025-05-06T21:22:01.375912+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User stayed on the page,timestamp=2025-05-06T21:46:21.226534+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=1468
+msg=User stayed on the page,timestamp=2025-05-06T22:15:00.842764+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=795

@@ -11,6 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 require_once __DIR__ . '/vendor/autoload.php';
+require_once 'init.php';
 require_once __DIR__ .'/UidProcessor.php';
 
 // Create log recorder
@@ -23,7 +24,7 @@ $log = new Logger('user_activity');
 
 // Define the log format
 $logFormat = "msg=%message%,timestamp=%datetime%,level_name=%level_name%,user_ip=%extra.user_ip%,request_id=%extra.request_id%,";
-$logFormat .= "duration=%context.duration%\n"; // 只有当 context 里有 duration 时才会记录
+$logFormat .= "duration=%context.duration%\n"; 
 
 // Use a StreamHandler with custom formatting
 $handler = new StreamHandler(__DIR__ . '/user-activity.log', Logger::INFO);
@@ -32,7 +33,6 @@ $handler->setFormatter(new LineFormatter($logFormat, null, true, true));
 $log->pushHandler($handler);
 $log->pushProcessor(new UidProcessor());
 
-// 记录用户点击链接的事件
 function log_user_activity_on_click() {
     global $log;
 
@@ -42,14 +42,6 @@ function log_user_activity_on_click() {
 
     $action = sanitize_text_field( $_GET['action'] );
     $user_ip = $_SERVER['REMOTE_ADDR'];
-    // $request_id = uniqid(); // Generate unique request ID for each log
-
-    // Add request_id to log context
-    // $log->pushProcessor(function($record) use ($request_id) {
-    //     $record['extra']['request_id'] = $request_id;
-    //     return $record;
-    // });
-
     // Deal with different user behaviours
     switch ( $action ) {
         case 'page_scrolled_to_bottom':
@@ -123,28 +115,22 @@ function log_click_event( ) {
 
 add_action('init', 'log_user_activity_on_click');
  
-// 添加前端脚本，用于触发日志记录
+// Trigger user behaviour logs
 function add_user_activity_scripts() {
-    // 只在首页启用
     if ( is_front_page() ) {
         ?>
         <script type="text/javascript">
 
             document.addEventListener('DOMContentLoaded', function () {
-                let startTime = Date.now(); // 记录进入页面的时间
-                // 监听用户离开页面
+                let startTime = Date.now(); 
                 window.addEventListener('beforeunload', function () {
-                    let endTime = Date.now(); // 记录离开页面的时间
-                    let duration = Math.round((endTime - startTime) / 1000); // 计算停留秒数
-                    // 发送日志到服务器
+                    let endTime = Date.now();
+                    let duration = Math.round((endTime - startTime) / 1000); // Calculate duration time
                     navigator.sendBeacon('<?php echo esc_url( home_url() ); ?>/?action=page_stay_duration&duration=' + duration);
                 });
 
-                // 获取按钮元素
                 const button = document.querySelector('.kb-button');
-                // 如果按钮存在
                 if (button) {
-                    // 监听按钮点击事件
                     button.addEventListener('click', function () {
                         fetch('<?php echo esc_url( home_url() ); ?>/?action=clicked_link', {
                             method: 'GET',
@@ -152,14 +138,12 @@ function add_user_activity_scripts() {
                                 'Content-Type': 'application/json',
                             }
                         }).then(response => {
-                            console.log('点击记录已发送');
-                        }).catch(error => console.log('请求失败', error));
+                        }).catch(error => console.log('Request failed', error));
                     });
                 }
 
                 const submit = document.querySelector('.kb-forms-submit');
                 if (submit) {
-                    // 监听按钮点击事件
                     submit.addEventListener('click', function () {
                         fetch('<?php echo esc_url( home_url() ); ?>/?action=submitted_form', {
                             method: 'GET',
@@ -167,8 +151,7 @@ function add_user_activity_scripts() {
                                 'Content-Type': 'application/json',
                             }
                         }).then(response => {
-                            console.log('form submit记录已发送');
-                        }).catch(error => console.log('请求失败', error));
+                        }).catch(error => console.log('Request failed', error));
                     });
                 }
 
@@ -176,15 +159,10 @@ function add_user_activity_scripts() {
 
                 accordionButtons.forEach(button => {
                     button.addEventListener("click", function () {
-                        // 获取按钮的 ID
                         const accordionId = this.getAttribute("id");
-                        // 获取折叠状态
                         const isExpanded = this.getAttribute("aria-expanded") === "true";
-                        // 获取标题内容
                         const title = this.querySelector(".kt-blocks-accordion-title")?.innerText || "Unknown Title";
                         const state = isExpanded ? "Opened" : "Closed";
-
-                        // 发送日志请求到服务器
                         fetch('<?php echo esc_url( home_url() ); ?>/?action=accordion_toggle&accordion_id=' + encodeURIComponent(accordionId) + '&title=' + encodeURIComponent(title) + '&state=' + encodeURIComponent(state), {
                             method: 'GET',
                             headers: {
@@ -192,22 +170,14 @@ function add_user_activity_scripts() {
                             }
                         }).then(response => {
                             console.log('Accordion event logged:', { accordionId, title, state });
-                        }).catch(error => console.log('请求失败', error));
+                        }).catch(error => console.log('request failed', error));
                     });
                 });
 
-                window.addEventListener('scroll', function() {
-                    // 用户滚动到页面的底部时触发
-                    if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight) {
-                        fetch('?action=page_scrolled_to_bottom');
-                    }
-                });
-
-                // 记录用户滚动到页面的 50% 位置
+                // Scroll down to 50% position
                 window.addEventListener('scroll', function() {
                     var scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-                    if (scrollPercentage >= 50 && !window.scrolled50) {
-                        window.scrolled50 = true; // 防止多次记录
+                    if (scrollPercentage >= 50) {
                         fetch('?action=page_scrolled_to_50_percent');
                     }
                 });
