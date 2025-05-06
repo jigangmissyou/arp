@@ -22,4 +22,8 @@ This project runs two WordPress sites with their respective MySQL databases and 
 
 ```bash
 git clone https://github.com/jigangmissyou/arp.git
-cd your-repo
+cd arp
+
+### 2. Start the Stack
+
+docker compose up -d
