@@ -21,6 +21,7 @@ This project runs two WordPress sites with their respective MySQL databases and 
 ### 1. Clone the Repository
 
 git clone https://github.com/jigangmissyou/arp.git
+
 cd arp
 
 ### 2. Start the Stack
