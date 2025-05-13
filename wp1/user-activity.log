@@ -104,3 +104,9 @@ msg=User stayed on the page,timestamp=2025-05-06T21:20:17.882929+00:00,level_nam
 msg=User triggered click event,timestamp=2025-05-06T21:22:01.375912+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
 msg=User stayed on the page,timestamp=2025-05-06T21:46:21.226534+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=1468
 msg=User stayed on the page,timestamp=2025-05-06T22:15:00.842764+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=795
+msg=User stayed on the page,timestamp=2025-05-07T00:27:37.589674+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=8753
+msg=User stayed on the page,timestamp=2025-05-07T22:06:59.560407+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=43
+msg=User scroll down to the 50% position,timestamp=2025-05-07T22:07:05.871985+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-07T22:07:15.318976+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-07T22:07:56.422527+00:00,level_name=INFO,user_ip=172.19.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0
+msg=User triggered click event,timestamp=2025-05-09T21:17:13.013725+00:00,level_name=INFO,user_ip=127.0.0.1,request_id=681e6083bf7ae638c4a88300ed807cb7,duration=0

@@ -44,10 +44,6 @@ function log_user_activity_on_click() {
     $user_ip = $_SERVER['REMOTE_ADDR'];
     // Deal with different user behaviours
     switch ( $action ) {
-        case 'page_scrolled_to_bottom':
-            log_scroll_event( 'User scroll down to the bottom' );
-            break;
-        
         case 'page_scrolled_to_50_percent':
             log_scroll_event( 'User scroll down to the 50% position' );
             break;
