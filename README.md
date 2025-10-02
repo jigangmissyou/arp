@@ -2,7 +2,7 @@
 
 This project runs two WordPress sites with their respective MySQL databases and centralized logging using the ELK (Elasticsearch, Logstash, Kibana) stack. Filebeat collects logs from each container for analysis and visualization.
 
-## 📦 Features
+##  Features
 
 - Two isolated WordPress + MySQL environments.
 - Centralized logging with ELK (Elasticsearch, Logstash, Kibana).
@@ -11,12 +11,12 @@ This project runs two WordPress sites with their respective MySQL databases and 
 - Nginx proxy for frontend access (optional).
 - Docker-based deployment.
 
-## 🛠️ Requirements
+##  Requirements
 
 - Docker
 - Docker Compose
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1. Clone the Repository
 
